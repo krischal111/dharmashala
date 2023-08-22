@@ -41,9 +41,9 @@ pub fn shift_right(x:&mut String, bit:char) -> char {
 }
 
 // To shift right arithmetically
-pub fn shift_right_arithmetic(x:&mut String) {
+pub fn shift_right_arithmetic(x:&mut String) -> char {
     // assuming that x will contain something, we will unwrap it.
-    shift_right(x, x.chars().next().unwrap());
+    shift_right(x, x.chars().next().unwrap())
 }
 
 // To extract msb and lsb

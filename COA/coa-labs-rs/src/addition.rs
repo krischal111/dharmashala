@@ -5,7 +5,7 @@ fn half_adder(a:char, b:char) -> (char, char) {
     let a = logic::char_to_logic(a);
     let b = logic::char_to_logic(b);
     let cy = a && b;
-    let sm = (a ^ b);
+    let sm = a ^ b;
     let carry = logic::logic_to_char(cy);
     let sum = logic::logic_to_char(sm);
     return (carry, sum);
@@ -27,12 +27,12 @@ fn full_adder_2(a:char, b:char, c:char) -> (char, char) {
         char_to_logic(c),
     );
     let carry = (a && b) || (b && c) || (c && a);
-    let sum = (a ^ b ^ c);
+    let sum = a ^ b ^ c;
     return (logic_to_char(carry), logic_to_char(sum));
 }
 
 // binary addition: two bits of n length
-pub fn binary_add(num1:&str, num2:&str, n:usize) -> (char, String) {
+pub fn binary_add(num1:&str, num2:&str, n:usize, mut c:char) -> (char, String) {
     let mut num1 = num1.to_string();
     let mut num2 = num2.to_string();
     let num1 = &mut num1;
@@ -40,9 +40,9 @@ pub fn binary_add(num1:&str, num2:&str, n:usize) -> (char, String) {
     fix_bit_length(num1, n);
     fix_bit_length(num2, n);
 
-    let (mut c, mut sm) = ('0', '0');
     let mut sum = "".to_string();
     for (a, b) in std::iter::zip(num1.chars().rev(), num2.chars().rev()) {
+        let sm;
         (c, sm) = full_adder(a, b, c);
         sum.insert(0, sm);
     }
@@ -62,7 +62,7 @@ fn test_binary_adder() {
     let num1 = "101101".to_string();
     let num2 = "101100".to_string();
     let n = 6;
-    let (c, sum) = binary_add(&num1, &num2, n);
+    let (c, sum) = binary_add(&num1, &num2, n, '0');
     display_add_sub(num1, num2, c, sum.clone(), n, '+');
     assert_eq!(('1', "011001"), (c, sum.as_str()));
     return;
