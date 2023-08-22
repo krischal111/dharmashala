@@ -1,1 +1,0 @@
-/Users/krischal/Desktop/git-clones/dharmashala/COA/coa-labs-rs/target/debug/coa-labs-rs: /Users/krischal/Desktop/git-clones/dharmashala/COA/coa-labs-rs/src/logic.rs /Users/krischal/Desktop/git-clones/dharmashala/COA/coa-labs-rs/src/main.rs

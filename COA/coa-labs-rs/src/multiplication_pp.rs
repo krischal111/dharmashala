@@ -10,7 +10,7 @@ fn binary_pp_multiplication(num1:&str, num2:&str, n:usize) -> String {
     fix_bit_length(&mut M, n);
     fix_bit_length(&mut Q, n);
 
-    for i in 0..n {
+    for _i in 0..n {
         let lsb = Q.chars().last().unwrap(); // LSB
         if lsb == '1' {
             // A = A + M

@@ -4,8 +4,7 @@ use crate::{
         fix_bit_length, invert
     }, 
     addition::{
-        binary_add, 
-        display_add_sub
+        binary_add, display_add_sub
     }
 };
 
