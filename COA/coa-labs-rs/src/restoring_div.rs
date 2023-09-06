@@ -1,6 +1,6 @@
 // Restoring division algorithm
 
-use crate::{logic::{fix_bit_length, shift_left, set_lsb_to, extract_msb, invert}, subtraction::binary_subtract, addition::binary_add};
+use crate::{logic::{fix_bit_length, shift_left, set_lsb_to, extract_msb, invert, char_repeat}, subtraction::binary_subtract, addition::binary_add};
 
 fn restoring_division(num1: &str, num2: &str, n:usize) -> (String, String) {
     #![allow(non_snake_case)]
@@ -10,6 +10,23 @@ fn restoring_division(num1: &str, num2: &str, n:usize) -> (String, String) {
     let mut Q = num1.to_string(); // dividend
     fix_bit_length(&mut B, n);
     fix_bit_length(&mut Q, n);
+
+    // Display part
+    println!("Dividing {Q} by {B} in {n} bits.");
+    println!();
+    println!("Initial values: ");
+    println!();
+
+    // Markdown compatible tabular printing
+    println!("| Registers | Values | Remarks          |");
+    println!("|-----------|-------{}-|------------------|", char_repeat('-', n as i32-6));
+    println!("|    B      | {B:>6} | Divisor          |");
+    println!("|    A      | {A:>6} | Initially zeros  |");
+    println!("|    Q      | {Q:>6} | Dividend         |");
+
+    println!();
+    println!("Calculation Table");
+    println!();
 
     for _i in 0..n {
         // shift left AQ

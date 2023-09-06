@@ -213,3 +213,9 @@ pub fn check_logic() {
 
     println!("{num}");
 }
+
+// String manipulations:
+pub fn char_repeat(ch: char, count: i32) -> String {
+    let count = if count > 0 { count } else { 0 };
+    ch.to_string().repeat(count as usize)
+}

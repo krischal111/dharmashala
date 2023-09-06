@@ -1,5 +1,5 @@
 
-use crate::{addition::binary_add, logic::{fix_bit_length, shift_right, shift_right_arithmetic}, subtraction::{binary_subtract, twos_complement}};
+use crate::{addition::binary_add, logic::{fix_bit_length, shift_right, shift_right_arithmetic, char_repeat}, subtraction::{binary_subtract, twos_complement}};
 
 // Simple multiplication
 fn binary_booth_multiplication(num1:&str, num2:&str, n:usize) -> String {
@@ -11,6 +11,25 @@ fn binary_booth_multiplication(num1:&str, num2:&str, n:usize) -> String {
     let mut Qb = '0';
     fix_bit_length(&mut M, n);
     fix_bit_length(&mut Q, n);
+
+    // Display part
+    println!("Multiplying {M} with {Q} in {n} bits.");
+    println!();
+    println!("Initial values: ");
+    println!();
+
+    // Markdown compatible tabular printing
+    println!("| Registers | Values | Remarks          |");
+    println!("|-----------|-------{}-|------------------|", char_repeat('-', n as i32-6));
+    println!("|    M      | {M:>6} | Multiplicand     |");
+    println!("|   -M      | {_negm:>6} | Neg Multiplicand  |");
+    println!("|    A      | {A:>6} | Initially zeros  |");
+    println!("|    Q      | {Q:>6} | Multiplier       |");
+    println!("|    Q(-1)  | {Qb:>6} | Initially bit 0  |");
+
+    println!();
+    println!("Calculation Table");
+    println!();
 
     for _i in 0..n {
         let lsb = Q.chars().last().unwrap();
