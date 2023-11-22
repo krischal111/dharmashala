@@ -1,0 +1,4 @@
+.with_border {
+    border: 1 px solid black;
+    border-collapse: collapse;
+}
