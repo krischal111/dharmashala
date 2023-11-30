@@ -1,4 +1,4 @@
-# Object Oriented Softare Engineering
+# Object Oriented Software Engineering
 ## Syllabus
 
 
@@ -19,11 +19,11 @@ This course aims to give both theoretical and practical foundations on the softw
     2. Software processes and software process models
     3. Agile software developments
     4. Requirement engineering procoesses
-    5. System modelling
+    5. System modeling
     6. Software prototyping
     7. Object Oriented software develpment
 
-2. Object oriented Concepts and Modelling (8 Hrs)
+2. Object oriented Concepts and Modeling (8 Hrs)
     1. Introduction to Class, Object, Inheritance, Polymorphism
     2. Object Oriented system development
         1. Object Oriented Modeling
@@ -38,7 +38,7 @@ This course aims to give both theoretical and practical foundations on the softw
         3. Defining operations
         4. Finalizing the object definition
 
-3. Structural, Behavioral and architectural Modelling (8 Hrs)
+3. Structural, Behavioral and architectural Modeling (8 Hrs)
     1. Classes Relationship
     2. Conceptual Model of UML
     3. Class diagram
@@ -101,5 +101,7 @@ The practical shall include projects on object oriented system development. Choi
 
 References:
     1. Ivar Jacobson, OOSE, Prentice Hous
-    2. Grady Booch, James Raumbaugh,
+    2. Grady Booch, James Raumbaugh, Ivar Jacobson, The Unified Modeling Language User Guide, Prentce House.
+    3. Pressman, Software Engineering, MC Graw Hall Education
+    4. Sommer ville, Software Engineering, Pearson
 
