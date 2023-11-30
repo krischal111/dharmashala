@@ -15,7 +15,7 @@ Welcome to the Electronics and Computer Engineering Resources repository! This c
 
 This project started with the mindset of retyping and compiling the lab sheets, and clearing up the convoluted course structure of Electronics Engineering. Now, we have strong emphasis on adding many important information and resources related to both Electronics and Computer Engineering.
 
-We have adopted the model of iterative refinement by the community to keep the resource materials update, and error free. Every viewers and users of this resources can benefit from the high quality materials that are iteratively refined by the community. You can fork this repo and make a pull request in order to make contribution to this repo.
+We have adopted the model of iterative refinement by the community to keep the resource materials up to date, and error free. Every viewers and users of this resources can benefit from the high quality materials that are iteratively refined by the community. You can fork this repo and make a pull request in order to make contribution to this repo.
 
 ## Getting Started
 
@@ -49,8 +49,8 @@ Each subject folder will contain a syllabus.md file and other files needed for t
 
 ## Disciplines
 
-+ [Electronics](Departments/BEI.md)
-+ [Computer](Departments/BCT.md)
++ [Electronics Communications and Information Engineering (BEI)](Departments/BEI.md)
++ [Computer Engineering (BCT)](Departments/BCT.md)
 
 ### Copyright notice
 
