@@ -8,6 +8,6 @@
 
 ## Sixth Semester
 1. Object Oriented Software Engineering
-    * [Syllabus]()
+    * [Syllabus](../Subjects/OOSE/syllabus.md)
 
 More subjects will be added later.
