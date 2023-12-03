@@ -6,7 +6,7 @@ If you want to skip to contents directly, follow the folowing links
 + [Electronics Communications and Information Engineering (BEI)](Departments/BEI.md)
 + [Computer Engineering (BCT)](Departments/BCT.md)
 
-These resources aren't complete yet. We rely on the contributers for the resources. So please contribute. It helps yourself and the users of this repository greatly.
+These resources aren't complete yet. We rely on the contributers for the resources. So please contribute. It helps yourselves and the users of this repository greatly.
 
 ## Table of Contents
 
