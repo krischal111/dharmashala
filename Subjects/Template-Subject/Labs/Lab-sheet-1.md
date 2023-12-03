@@ -5,6 +5,9 @@
 ### Question to check knowledge
 If you have some question to check the previous knowledge, like some quiz, put it here. Else leave part.
 
+### Question able to answer after the lab
+Some of the question that student will know after the lab. This will make the lab participant more eager to find the answer while doing the lab, improving the focus and attention.
+
 ### Objectives
 
 ### Procedures:
