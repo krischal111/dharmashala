@@ -18,7 +18,7 @@
 
 ## Third Semester
 1. Electronics Devices and Circuit
-2. Electromagnetics
+2. Electromagnetism
 3. Instrumentation (I and II combined)
 4. Engineering Mathematics III
 5. Probability and Statistics
@@ -99,5 +99,4 @@ Elective III choices:
 - Geographic Information System
 - Speech Processing
 
-
-More subjects will be added later.
+*Note about electives, elective subjects are combined for BEI and BCT and taught together.
