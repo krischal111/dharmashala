@@ -24,3 +24,7 @@ lorem ipsum
 ## References
     1. Book 1
     2. Book 2
+
+## Attributions to the Contributors:
+
+[Name](https://github.link.of.contributer)
