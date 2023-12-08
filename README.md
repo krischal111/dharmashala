@@ -8,6 +8,9 @@ If you want to skip to contents directly, follow the folowing links
 
 These resources aren't complete yet. We rely on the contributers for the resources. So please contribute. It helps yourselves and the users of this repository greatly.
 
+You can find this repository on github from this link:
+[Main Repository](https://github.com/krischal111/dharmashala)
+
 ## Table of Contents
 
 1. [Introduction](#introduction)
