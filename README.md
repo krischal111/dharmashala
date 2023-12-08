@@ -11,6 +11,9 @@ These resources aren't complete yet. We rely on the contributers for the resourc
 You can find this repository on github from this link:
 [Main Repository](https://github.com/krischal111/dharmashala)
 
+Currently this repository is hosted using github pages at this website:
+[Hosted link](https://krischal111.github.io/dharmashala)
+
 ## Table of Contents
 
 1. [Introduction](#introduction)
