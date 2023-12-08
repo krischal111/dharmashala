@@ -93,3 +93,7 @@ Some of the frequently asked questions are:
 More on: [The license file](LICENSE)
 
 Thank you for contributing to the Electronics and Computer Engineering Resources repository! Together, let's build a universal resource for the diverse community of students and professionals.
+
+## Attributions to the Contributors:
+
+[Krischal Khanal](https://github.com/krischal111)

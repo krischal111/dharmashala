@@ -105,3 +105,8 @@ References:
     3. Pressman, Software Engineering, MC Graw Hall Education
     4. Sommer ville, Software Engineering, Pearson
 
+
+
+## Attributions to the Contributors:
+
+[Krischal Khanal](https://github.com/krischal111)

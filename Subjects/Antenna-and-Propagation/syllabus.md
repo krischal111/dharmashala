@@ -74,3 +74,7 @@ To provide the student with an understanding of antennas, EM wave propagation an
 | 5     | 6     | 1.5       |
 | 6     | 11    | 2.5       |
 | Total | 45    | 11        |
+
+## Attributions to the Contributors:
+
+[Krischal Khanal](https://github.com/krischal111)
