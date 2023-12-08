@@ -1,9 +1,11 @@
 # Subject Name
 ## Syllabus
 
-Lectures: ## per week
-Tutorial: ## per week
-Practical: ## per two weeks
+Lectures: ## Teaching Hours per week
+
+Tutorial: ## Teaching Hours per week
+
+Practical: ## Teaching Hours per two weeks
 
 ## Course Objectives
 
