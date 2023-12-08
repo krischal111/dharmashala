@@ -6,3 +6,8 @@
 
 # Vivas
 1. Tips about the viva.
+
+
+## Attribution to the contributors:
+
+[Name](https://github.link.of.contributer)

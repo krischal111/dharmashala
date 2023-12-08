@@ -8,6 +8,6 @@
 1. Tips about the viva.
 
 
-## Attributions to the Contributors:
+## Attribution to the contributors:
 
 [Name](https://github.link.of.contributer)

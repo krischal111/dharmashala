@@ -25,3 +25,8 @@ For physical labs:
 
 You can make a simple lab report template, or link it.
 Although you can put a lab-report, preferably in markdown format here, it is better to let others figure out themselves. Here, we just make it extremely easy.
+
+
+## Attribution to the contributors:
+
+[Name](https://github.link.of.contributer)

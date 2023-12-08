@@ -19,6 +19,6 @@
 
 Do not include piracy links here. We do not promote piracy.
 
-## Attributions to the Contributors:
+## Attribution to the contributors:
 
 [Name](https://github.link.of.contributer)

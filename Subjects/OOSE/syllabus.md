@@ -107,6 +107,6 @@ References:
 
 
 
-## Attributions to the Contributors:
+## Attribution to the contributors:
 
 [Krischal Khanal](https://github.com/krischal111)

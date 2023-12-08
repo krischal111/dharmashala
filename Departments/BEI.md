@@ -103,6 +103,6 @@ Elective III choices:
 
 *Note about electives, elective subjects are combined for BEI and BCT and taught together.
 
-## Attributions to the Contributors:
+## Attribution to the contributors:
 
 [Krischal Khanal](https://github.com/krischal111)
