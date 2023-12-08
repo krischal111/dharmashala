@@ -100,4 +100,4 @@ Thank you for contributing to the Electronics and Computer Engineering Resources
 
 ## Seeing the Contributors:
 
-[See the list of contributors](graphs/contributers)
+[See the list of contributors](graphs/contributors)
