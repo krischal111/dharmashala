@@ -44,6 +44,8 @@
 
 ## Sixth Semester
 1. Antenna and Propagation
+    * [Syllabus](../Subjects/Antenna-and-Propagation/syllabus.md)
+    * [Labs (Incomplete now)](../Subjects/Antenna-and-Propagation/labs.md)
 2. Communication System (I and II combined)
 3. Embedded System
 4. Object Oriented Software Engineering
