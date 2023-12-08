@@ -102,3 +102,7 @@ Elective III choices:
 - Speech Processing
 
 *Note about electives, elective subjects are combined for BEI and BCT and taught together.
+
+## Attributions to the Contributors:
+
+[Krischal Khanal](https://github.com/krischal111)
