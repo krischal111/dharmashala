@@ -7,6 +7,7 @@
 4. Basic Electrical Engineering
 5. Engineering Drawing I
 6. Engineering Physics
+* [Tips for the first semester](BEI-extra/1st-sem-tips.md)
 
 ## Second Semester
 1. Microprocessor
