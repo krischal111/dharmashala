@@ -49,6 +49,8 @@
     * [Labs (Incomplete now)](../Subjects/Antenna-and-Propagation/labs.md)
 2. Communication System (I and II combined)
 3. Embedded System
+    * [Syllabus](../Subjects/Embedded-System/syllabus.md)
+    * [Labs (Incomplete now)](../Subjects/Embedded-System/labs.md)
 4. Object Oriented Software Engineering
     * [Syllabus](../Subjects/OOSE/syllabus.md)
 5. Minor Project

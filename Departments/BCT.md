@@ -51,6 +51,8 @@
 3. Database Management Systewm
 4. Object Oriented Analysis and Design
 5. Embedded System
+    * [Syllabus](../Subjects/Embedded-System/syllabus.md)
+    * [Labs (Incomplete now)](../Subjects/Embedded-System/labs.md)
 6. Engineering Economics
 7. Minor Project
 
