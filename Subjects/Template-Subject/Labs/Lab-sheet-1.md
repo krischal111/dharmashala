@@ -1,6 +1,6 @@
 # Lab title and number
-
-### Required Knowledge
+## Subject
+### Expected prior knowledge
 
 ### Question to check knowledge
 If you have some question to check the previous knowledge, like some quiz, put it here. Else leave part.

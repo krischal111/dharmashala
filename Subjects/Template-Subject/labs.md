@@ -1,4 +1,5 @@
-# Notes about lab
+# Subject Name
+## Notes about lab
 
 # Regular labs
 1. [Link text for lab 1](link path for lab 1)
