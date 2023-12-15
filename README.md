@@ -105,8 +105,10 @@ Thank you for contributing to the Electronics and Computer Engineering Resources
 
 ## Attribution to the contributors:
 
-[Krischal Khanal](https://github.com/krischal111)
+<a href="https://github.com/krischal111/dharmashala/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=krischal111/dharmashala" />
+</a>
 
-## Seeing the Contributors:
+(Made with [contrib.rocks](https://contrib.rocks)).
 
-[See the list of contributors](https://github.com/krischal111/dharmashala/graphs/contributors)
+[Details](https://github.com/krischal111/dharmashala/graphs/contributors)
