@@ -48,7 +48,7 @@
     * [Syllabus](../Subjects/Antenna-and-Propagation/syllabus.md)
     * [Labs (Incomplete now)](../Subjects/Antenna-and-Propagation/labs.md)
 2. Communication System (I and II combined)
-    * [Syllabus](/Subjects/Communication-System/syllabus.md)
+    * [Syllabus](../Subjects/Communication-System/syllabus.md)
 3. Embedded System
     * [Syllabus](../Subjects/Embedded-System/syllabus.md)
     * [Labs (Incomplete now)](../Subjects/Embedded-System/labs.md)
