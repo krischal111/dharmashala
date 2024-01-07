@@ -151,6 +151,7 @@ Mark distribution for all the chapters in the syllabus is shown in the table bel
 | 5     | 11, 12 and 13 | 6 + 2 + 6 = 14 | 20%                    |
 | Total |               | 62 hours       | 80%                    |
 
+* There may be minor variations in the marks distributions.
 
 ## Attributions to the Contributors:
 
