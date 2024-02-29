@@ -54,8 +54,10 @@
     * [Labs (Incomplete now)](../Subjects/Embedded-System/labs.md)
 4. Object Oriented Software Engineering
     * [Syllabus](../Subjects/OOSE/syllabus.md)
-5. Minor Project
-6. Communication English
+5. Project Management
+    * [Syllabus](../Subjects/Project-Management/syllabus.md)
+5. Communication English
+7. Minor Project
 
 ## Seventh Semester
 1. RF and Microwave Engineering
