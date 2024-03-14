@@ -13,7 +13,7 @@ To make students able to plan, monitor and control project and project related a
 
 ## Theory
 
-1. Introcuction (2 hours)
+1. Introduction (2 hours)
     1. Definition of project and project management
     2. Project objectives
     3. Classification of projects

@@ -9,7 +9,7 @@ Practical: 3 Teaching Hours per week
 
 ## Course Objectives
 
-To introduce the students to the principles and building blocks of nalog and digital communication systems.
+To introduce the students to the principles and building blocks of analog and digital communication systems.
 
 ## Theory
 
@@ -22,13 +22,13 @@ To introduce the students to the principles and building blocks of nalog and dig
     1. Review of signals (types, mathematical representation and applications).
     2. Linear/non-linear, time variant/invarient systems. Impulse response and transfer function of a system. Properties of LTI systems.
     3. Low pass and band pass signals and systems, bandwidth of the system, distorionless transmission, the Hilbert transform and its properties.
-    4. Complex envelops rectangular (in-phase and quadrature components) and polar representatoin of band pass band limited signals.
+    4. Complex envelops rectangular (in-phase and quadrature components) and polar representation of band pass band limited signals.
 
 3. Spectral analysis (2 hours)
     1. Review of Fourier series and transform, energy and power, Parseval's theorem.
     2. Energy Density Spectrum, periodogram, power spectral density function (psdf).
     3. Power spectral density functions of harmonic signal and white noise.
-    4. The autocorrelation (AC) function, relationshp between psdf and AC function
+    4. The autocorrelation (AC) function, relationship between psdf and AC function
 
 4. Amplitude Modulation and Demodulation (8 hours)
     1. Time domain expressions, frequency domain representation, modulation index, signal bandwidth of Amplitude Modulated (AM) signal.
