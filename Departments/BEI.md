@@ -64,7 +64,9 @@
 2. Wireless Communication
 3. Digital Signal Analysis and Processing
 4. Artificial Intelligence
+    *[Syllabus](../Subjects/Artificial-Intelligence/syllabus.md)
 5. Organization and Management
+    *[Syllabus](../Subjects/Organization-and-Management/syllabus.md)
 6. Project (Part A)
 7. Elective I
 
