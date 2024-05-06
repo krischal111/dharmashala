@@ -115,6 +115,21 @@ Tutorial: 1 Teaching Hours per week
     8. C. B. Mamoria “Personnel Management”, Himalaya Publishing House – 1989
     9. O. P. Khanna, “Industrial Engineering and Management” , Dhanpat Rai Publications (P) Ltd., 2007
 
+# Evaluation Scheme
+
+| Units | Chapters      | Hours          | Marks Distrubution     |
+| ----- | ------------- | -------------- | ---------------------- |
+| 1     | 1.1 and 1.2   | 6              |    8 or 16             |
+|       | 1.6           | 4              |    8                   |
+| 2     | 1.3           | 6              |    8                   |
+|       | 1.4 and 1.5   | 4              |    8                   |
+| 3     | 2             | 8              |   16                   |
+| 4     | 3.1           | 6              |    8                   |
+|       | 3.2 and 3.3   | 4              |    8                   |
+| 5     | 4 and 5       | 7              |    8 or 16             |
+| Total |               | 45 hours       |  80                    |
+
+
 ## Attributions to the Contributors:
 
 [Krischal Khanal](https://github.com/krischal111)

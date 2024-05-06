@@ -81,6 +81,8 @@ Laboratory exercises should be conducted in either LISP or PROLOG. Laboratory ex
     P. H. Winston, Artificial Intelligence, Addison Wesley, 2008.
     Stuart Russel and Peter Norvig, Artificial Intelligence A Modern Approach, Pearson, 2010
 
+# Evaluation Scheme
+
 | S.N.  | Chapter       | Hours          | Marks Distrubution     |
 | ----- | ------------- | -------------- | ---------------------- |
 | 1     | 1             | 4              |    7                   |
