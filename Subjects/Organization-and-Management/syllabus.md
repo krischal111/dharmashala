@@ -1,4 +1,4 @@
-# Subject Name
+# Organization and Management
 ## Syllabus
 
 Lectures: 3 Teaching Hours per week

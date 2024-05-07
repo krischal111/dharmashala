@@ -62,6 +62,7 @@
 ## Seventh Semester
 1. RF and Microwave Engineering
 2. Wireless Communication
+    * [Syllabus](../Subjects/Wireless-Communication/syllabus.md)
 3. Digital Signal Analysis and Processing
 4. Artificial Intelligence
     * [Syllabus](../Subjects/Artificial-Intelligence/syllabus.md)
