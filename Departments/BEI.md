@@ -61,6 +61,7 @@
 
 ## Seventh Semester
 1. RF and Microwave Engineering
+    * [Syllabus](../Subjects/RF-and-Microwave-Engineering/syllabus.md)
 2. Wireless Communication
     * [Syllabus](../Subjects/Wireless-Communication/syllabus.md)
 3. Digital Signal Analysis and Processing
