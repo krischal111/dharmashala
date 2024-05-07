@@ -83,6 +83,21 @@ The course deals with the basic understanding of the fundamentals of Radio Frequ
 3. Designing and analysis of simple strip-line and two-port circuits using network and spectrum analysers
 4. Software-based (ADS-like) RF signal & circuit simulation practices
 
+# Evaluation Scheme
+
+| S.N.  | Chapter       | Hours          | Marks Distrubution     |
+| ----- | ------------- | -------------- | ---------------------- |
+| 1     | 1             |  3             |    8                   |
+| 2     | 2             |  6             |    8                   |
+| 3     | 3             |  4             |    8                   |
+| 4     | 4             |  8             |   10                   |
+| 5     | 5             |  5             |    8                   |
+| 6     | 6             | 10             |   20                   |
+| 7     | 7             |  3             |    8                   |
+| 8     | 8             |  6             |   10                   |
+| Total |               | 45 hours       |   80                   |
+
+
 ## References
 
     Microwave Principles - Herbert J. Reich and et al., Van Nostard Reinhold.
