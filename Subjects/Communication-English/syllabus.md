@@ -120,11 +120,10 @@ Practical: 2 Teaching Hours per two weeks
 1. Taylor, Shirley et. al. (2009), "Model Business letters, E-mails & other Business documents", Pearson Education.
 
 ## Practical
-Language lab
 
-lorem ipsum
+Language lab.
 
 
 ## Attributions to the Contributors:
 
-[Name](https://github.link.of.contributer)
+[Krischal Khanal](https://github.com/krischal111)

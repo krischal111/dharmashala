@@ -65,6 +65,7 @@
 2. Wireless Communication
     * [Syllabus](../Subjects/Wireless-Communication/syllabus.md)
 3. Digital Signal Analysis and Processing
+    * [Syllabus](../Subjects/Digital-Signal-Analysis-and-Processing/syllabus.md)
 4. Artificial Intelligence
     * [Syllabus](../Subjects/Artificial-Intelligence/syllabus.md)
 5. Organization and Management
