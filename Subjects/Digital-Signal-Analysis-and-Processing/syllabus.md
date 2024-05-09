@@ -76,6 +76,7 @@ To introduce digital signal processing techniques and algorithms.
 ## Evaluation Scheme
 
 Marks distribution for all the chapters in the syllabus is shown in the table below.
+
 | S.N.  | Chapter       | Hours          | Marks Distrubution     |
 | ----- | ------------- | -------------- | ---------------------- |
 | 1     | 1             |  8             |    9                   |
