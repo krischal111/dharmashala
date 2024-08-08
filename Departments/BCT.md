@@ -78,6 +78,10 @@ Elective I choices:
 - Image Processing & Pattern Recognition
 - Web Technology
 - Bio-Medical Instrumentation
+- FPGA
+- Advanced Data Science
+- Computer Security
+- ARM Architecture
 
 ## Eighth Semester
 1. Internet and Intranet

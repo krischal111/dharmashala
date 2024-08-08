@@ -87,6 +87,10 @@ Elective I choices:
 - Image Processing & Pattern Recognition
 - Web Technology
 - Operating System
+- FPGA
+- Advanced Data Science
+- Computer Security
+- ARM Architecture
 
 ## Eighth Semester
 1. Telecommunications
