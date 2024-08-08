@@ -67,7 +67,7 @@
     * [Syllabus](../Subjects/Organization-and-Management/syllabus.md)
 7. Elective I
     - FPGA
-        * [](../Subjects/Advanced-FPGA-and-Embedded-Design/syllabus.md)
+        * [Syllabus](../Subjects/Advanced-FPGA-and-Embedded-Design/syllabus.md)
 8. Project I
 
 Elective I choices:
