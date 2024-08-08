@@ -59,11 +59,15 @@
 ## Seventh Semester
 1. Computer Networks and Security
 2. Digital Signal Analysis and Processing
+    * [Syllabus](../Subjects/Digital-Signal-Analysis-and-Processing/syllabus.md)
 3. Distributed System
 4. ICT Project Management
 5. Energy Environment and Society
 6. Organization and Management
+    * [Syllabus](../Subjects/Organization-and-Management/syllabus.md)
 7. Elective I
+    - FPGA
+        * [](../Subjects/Advanced-FPGA-and-Embedded-Design/syllabus.md)
 8. Project I
 
 Elective I choices:

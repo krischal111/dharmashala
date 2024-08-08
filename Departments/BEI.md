@@ -72,6 +72,8 @@
     * [Syllabus](../Subjects/Organization-and-Management/syllabus.md)
 6. Project (Part A)
 7. Elective I
+    - FPGA
+        * [](../Subjects/Advanced-FPGA-and-Embedded-Design/syllabus.md)
 
 Elective I choices:
 - Power Electronics
