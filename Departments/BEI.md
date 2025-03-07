@@ -94,6 +94,7 @@ Elective I choices:
 
 ## Eighth Semester
 1. Telecommunications
+    * [Syllabus](../Subjects/Telecommunication/syllabus.md)
 2. Information System
 3. Project (Part B)
 4. Engineeering Professional Practice
