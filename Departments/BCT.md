@@ -86,6 +86,7 @@ Elective I choices:
 ## Eighth Semester
 1. Internet and Intranet
 2. Information System
+    * [Syllabus](../Subjects/Information-System/syllabus.md)
 3. Simulation and Modeling
 4. Engineeering Professional Practice
 5. Elective II

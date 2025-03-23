@@ -96,6 +96,7 @@ Elective I choices:
 1. Telecommunications
     * [Syllabus](../Subjects/Telecommunication/syllabus.md)
 2. Information System
+    * [Syllabus](../Subjects/Information-System/syllabus.md)
 3. Project (Part B)
 4. Engineeering Professional Practice
 5. Energy Environment and Society
