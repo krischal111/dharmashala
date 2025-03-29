@@ -89,6 +89,7 @@ Elective I choices:
     * [Syllabus](../Subjects/Information-System/syllabus.md)
 3. Simulation and Modeling
 4. Engineeering Professional Practice
+    * [Syllabus](../Subjects/Engineering-Professional-Practice/syllabus.md)
 5. Elective II
 6. Elective II
 7. Project II

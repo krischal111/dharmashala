@@ -99,6 +99,7 @@ Elective I choices:
     * [Syllabus](../Subjects/Information-System/syllabus.md)
 3. Project (Part B)
 4. Engineeering Professional Practice
+    * [Syllabus](../Subjects/Engineering-Professional-Practice/syllabus.md)
 5. Energy Environment and Society
 6. Elective II
 7. Elective II
