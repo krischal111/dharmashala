@@ -100,8 +100,8 @@ Elective I choices:
 3. Project (Part B)
 4. Engineeering Professional Practice
     * [Syllabus](../Subjects/Engineering-Professional-Practice/syllabus.md)
-5. Energy Environment and Society
-    * [Syllabus](../Subjects/Energy-Environment-and-Society/syllabus.md)
+5. Energy Environment and Society [EX 757]
+    * [Syllabus](../Subjects/Energy-Environment-and-Society-BEI/syllabus.md)
 6. Elective II
 7. Elective II
 

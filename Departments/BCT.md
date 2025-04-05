@@ -64,8 +64,8 @@
 3. Distributed System
 4. ICT Project Management
     * [Syllabus](../Subjects/Project-Management/syllabus.md)
-5. Energy Environment and Society
-    * [Syllabus](../Subjects/Energy-Environment-and-Society/syllabus.md)
+5. Energy Environment and Society [EX 701]
+    * [Syllabus](../Subjects/Energy-Environment-and-Society-BCT/syllabus.md)
 6. Organization and Management
     * [Syllabus](../Subjects/Organization-and-Management/syllabus.md)
 7. Elective I
