@@ -52,7 +52,7 @@ To familiarize the students with their roles in the society, ethical and legal e
     4. Development and Environment
     5. Conflict and Dispute Management
 
-7. Case Studiesbased on Engineering Practices  [4 hours]
+7. Case Studies based on Engineering Practices  [4 hours]
 
 ## Evaluation Scheme
 

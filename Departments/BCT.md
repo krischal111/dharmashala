@@ -47,6 +47,7 @@
 
 ## Sixth Semester
 1. Artificial Intelligence
+    * [Syllabus](../Subjects/Artificial-Intelligence/syllabus.md)
 2. Operating System
 3. Database Management Systewm
 4. Object Oriented Analysis and Design
@@ -62,7 +63,9 @@
     * [Syllabus](../Subjects/Digital-Signal-Analysis-and-Processing/syllabus.md)
 3. Distributed System
 4. ICT Project Management
+    * [Syllabus](../Subjects/Project-Management/syllabus.md)
 5. Energy Environment and Society
+    * [Syllabus](../Subjects/Energy-Environment-and-Society/syllabus.md)
 6. Organization and Management
     * [Syllabus](../Subjects/Organization-and-Management/syllabus.md)
 7. Elective I
