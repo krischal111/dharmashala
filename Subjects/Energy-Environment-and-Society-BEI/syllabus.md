@@ -73,7 +73,7 @@ To understand the various types of energy sources and their environmental impact
 | 4     | 4             |  8             |    13                  |
 | 5     | 5             |  3             |    3                   |
 | 6     | 6             |  3             |    4                   |
-| 6     | 6             |  4             |    4                   |
+| 7     | 7             |  4             |    4                   |
 | Total |               | 30 hours       |   40                   |
 
 ## References
