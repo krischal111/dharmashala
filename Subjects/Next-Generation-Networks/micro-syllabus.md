@@ -200,7 +200,7 @@ Practical: 3 Teaching Hours per two weeks
         - RISs with Signal Reception and Reflection Units,
         )
 
-    4.Communication Models and Channel Models.
+    4. Communication Models and Channel Models.
     - Dynamic Metasurface Antennas (DMA), 
     - Stacked Intelligent Metasurfaces (SIM), 
     - Simultaneously Transmitting and Reflecting (STAR)-RIS, 
