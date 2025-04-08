@@ -94,7 +94,10 @@ Elective I choices:
 4. Engineeering Professional Practice
     * [Syllabus](../Subjects/Engineering-Professional-Practice/syllabus.md)
 5. Elective II
-6. Elective II
+    - Next Generation Wireless Networks
+        * [Micro Syllabus](../Subjects/Next-Generation-Networks/micro-syllabus.md)
+        * [Syllabus](../Subjects/Next-Generation-Networks/syllabus.md)
+6. Elective III
 7. Project II
 
 Elective II choices:

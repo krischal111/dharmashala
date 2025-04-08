@@ -103,7 +103,10 @@ Elective I choices:
 5. Energy Environment and Society [EX 757]
     * [Syllabus](../Subjects/Energy-Environment-and-Society-BEI/syllabus.md)
 6. Elective II
-7. Elective II
+    - Next Generation Wireless Networks
+        * [Micro Syllabus](../Subjects/Next-Generation-Networks/micro-syllabus.md)
+        * [Syllabus](../Subjects/Next-Generation-Networks/syllabus.md)
+7. Elective III
 
 Elective II choices:
 - Agile Methodologies
