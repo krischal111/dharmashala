@@ -16,7 +16,7 @@ For supplementary contents which provide clarification for some of the contents,
 - Designed to run on GE 645 mainframe
 
 Reference:
-(https://en.wikipedia.org/wiki/Multics)
+<https://en.wikipedia.org/wiki/Multics>
 
 **Linux:**
 - Developer: Linus Torvalds

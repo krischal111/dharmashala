@@ -9,10 +9,10 @@ The contents mentioned here are only to supplement the [main note](Notes.md)
 Multics was Time Sharing OS based on Single Level Memory. Those term's meaning were as follows.
 
 #### Time Sharing OS:
-In time sharing OS, concurrency sharing of computing resource is done by giving each user or a task a small slice of the processing time. The quick switch between users or the tasks gives an illusion of simultaneous execution. (https://en.wikipedia.org/wiki/Time-sharing)
+In time sharing OS, concurrency sharing of computing resource is done by giving each user or a task a small slice of the processing time. The quick switch between users or the tasks gives an illusion of simultaneous execution. <https://en.wikipedia.org/wiki/Time-sharing>
 
 #### Single Level Memory
-In context of Multics, *Single-level memory* means that an OS has no concept of files, only persistent objects are mapped onto the address space of the processes. (https://en.wikipedia.org/wiki/Single-level_store)
+In context of Multics, *Single-level memory* means that an OS has no concept of files, only persistent objects are mapped onto the address space of the processes. <https://en.wikipedia.org/wiki/Single-level_store>
 
 #### Linux-License
 - Initially published under GNU GPL
