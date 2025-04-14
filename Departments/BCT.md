@@ -101,6 +101,7 @@ Elective I choices:
     - Linux
         * [Syllabus](../Subjects/Linux/syllabus.md)
         * [Notes](../Subjects/Linux/Notes.md)
+        * [Supplementary Notes](../Subjects/Linux/More-Notes.md)
 7. Project II
 
 Elective II choices:
