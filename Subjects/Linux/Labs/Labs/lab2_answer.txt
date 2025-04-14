@@ -1,0 +1,200 @@
+ Run "script --timing=timming_first-name -a first-name_roll-no_20250129" (e.g. script --timing=raju_timming -a raju_33444991919_20250113). Make sure to run all below commands on current window only.
+
+Q0. Copy your ssh to /etc/skel/
+
+A0
+[lisa@lisa ~]$ sudo cp -r .ssh /etc/skel/
+[lisa@lisa ~]$ ls -al /etc/skel/
+total 28
+drwxr-xr-x.  3 root root   88 Feb  1 20:16 .
+drwxr-xr-x. 85 root root 8192 Feb  1 16:23 ..
+-rw-r--r--.  1 root root   18 Apr 30  2024 .bash_logout
+-rw-r--r--.  1 root root  141 Apr 30  2024 .bash_profile
+-rw-r--r--.  1 root root  492 Apr 30  2024 .bashrc
+drwx------.  2 sun  sun   38 Feb  1 20:35 .ssh
+
+
+
+Q1. Add two groups called comp-dept and elec-dept with gid 5000 and 6000 respectively.
+
+A1
+[lisa@lisa ~]$ sudo groupadd -g 5000 comp-dept
+[lisa@lisa ~]$ sudo groupadd -g 5001 elec-dept
+
+[lisa@lisa ~]$ getent group comp-dept
+comp-dept:x:5000:
+[lisa@lisa ~]$ getent group elec-dept
+elec-dept:x:5001:
+
+
+
+Q2. Add  below users. Verify the user and group items are populated correctly.
+a) sun and moon (uid 5001 and 5002) with comp-dept as Supplementary 
+
+A2a
+[lisa@lisa ~]$ sudo useradd -u 5002 -G comp-dept moon
+[lisa@lisa ~]$ sudo useradd -u 5001 -G comp-dept sun
+
+[lisa@lisa ~]$ getent passwd sun
+sun:x:5001:5003::/home/sun:/bin/bash
+
+[lisa@lisa ~]$ sudo groups sun
+sun : sun comp-dept
+
+
+[lisa@lisa ~]$ getent passwd moon
+moon:x:5002:5002::/home/moon:/bin/bash
+
+[lisa@lisa ~]$ sudo groups moon
+moon : moon comp-dept
+
+
+b) mars and jupiter (uid 6001 and 6002) with elct-dept and comp-dept as Supplementary group
+
+A2b
+[lisa@lisa ~]$ sudo useradd -u 6001 -G elec-dept,comp-dept mars
+[lisa@lisa ~]$ sudo useradd -u 6002 -G elec-dept,comp-dept jupiter
+
+
+What file permission does sun user have on the home folder? 
+On home directory, the sun user have read, write and execute permission. (Reason: It is due to "HOME_MODE	0700" /etc/login.defs)
+
+[lisa@lisa ~]$ sudo ls -ld /home/sun/
+drwx------. 3 sun sun 109 Feb  1 20:35 /home/sun/
+
+What files exists under the directory including the hidden files? 
+
+It has 3 hidden files and 1 hidden directories, all copied from /etc/skel. (useradd manpage state "The skeleton directory, which contains files and directories to be copied in the user's home directory, when the home directory is created by useradd.")
+
+[lisa@lisa ~]$ sudo ls -al /home/sun/
+total 20
+drwx------.  3 sun  sun  109 Feb  1 20:35 .
+drwxr-xr-x. 10 root root 109 Feb  1 20:40 ..
+-rw-------.  1 sun  sun   78 Feb  1 20:37 .bash_history
+-rw-r--r--.  1 sun  sun   18 Apr 30  2024 .bash_logout
+-rw-r--r--.  1 sun  sun  141 Apr 30  2024 .bash_profile
+-rw-r--r--.  1 sun  sun  492 Apr 30  2024 .bashrc
+drwx------.  2 sun  sun   38 Feb  1 20:35 .ssh
+
+
+Write the reason why there are multiple files by default?
+They are copied from /etc/skel
+
+
+Q3. Create file system, and Mount sdb and sdc under /mnt directory. 
+Give right permissions to user sun including his group members so that it has read, write and execute permission on sdb.
+
+A3
+[lisa@lisa ~]$ sudo mkfs -t ext4 /dev/sdb 1> /dev/null
+mke2fs 1.46.5 (30-Dec-2021)
+
+
+[lisa@lisa ~]$ sudo mkdir /mnt/sdb
+[lisa@lisa ~]$ sudo chown :comp-dept -R /mnt/sdb
+[root@lisa ~]$ sudo chmod g+w -R /mnt/sdb
+[root@lisa ~]#  ls -al /mnt/sdb
+total 13
+drwxrwxr-x. 3 root comp-dept  1024 Feb  2 11:37 .
+drwxr-xr-x. 8 root root         80 Feb  2 11:31 ..
+drwx-w----. 2 root comp-dept 12288 Feb  2 11:30 lost+found
+
+Q4. Login as sun, create sun1 with "hello sun" content under /mnt/sdb. 
+
+A5
+[root@lisa ~]# su - sun
+Last login: Sun Feb  2 11:36:00 JST 2025 on pts/0
+[sun@lisa ~]$ cd /mnt/sdb
+[sun@lisa sdb]$ echo "hello sun" >> test
+[sun@lisa sdb]$ cat test
+hello sun
+
+Q5. Login as moon, are you able to read sun1? And update ? if not why?
+
+A5
+[moon@lisa sdb]$ cat test
+hello sun
+
+[moon@lisa sdb]$ echo "hello moon" >> test
+-bash: test: Permission denied
+
+
+[moon@lisa sdb]$ ls -al test
+-rw-r--r--. 1 sun comp-dept 15 Feb  2 11:40 test
+
+Yes the user moon can read. 
+As group has only read permission, user moon can not update the file.
+
+Note: Any group member will be able delete the file. 
+
+[moon@lisa sdb]$ rm -f test
+[moon@lisa sdb]$ ls -al
+total 13
+drwxrwxr-x. 3 root comp-dept  1024 Feb  2 11:55 .
+drwxr-xr-x. 8 root root         80 Feb  2 11:31 ..
+drwx-w----. 2 root comp-dept 12288 Feb  2 11:30 lost+found
+
+To overvome it, we need to add sticky bit on the directory.
+
+[lisa@lisa ~]$ sudo chmod +t /mnt/sdb
+[lisa@lisa ~]$ sudo ls  -l /mnt/
+drwxrwxr-t. 3 root comp-dept 1024 Feb  2 12:25 sdb
+
+[root@lisa ~]# su - sun
+Last login: Sun Feb  2 12:18:11 JST 2025 on pts/0
+[sun@lisa ~]$ echo "hello sun" >> /mnt/sdb/test
+[sun@lisa ~]$ ls -al /mnt/sdb/test
+-rw-r--r--. 1 sun comp-dept 10 Feb  2 12:27 /mnt/sdb/test
+
+[root@lisa ~]# su - moon
+Last login: Sun Feb  2 12:18:22 JST 2025 on pts/0
+[moon@lisa ~]$ rm -f /mnt/sdb/test
+rm: cannot remove '/mnt/sdb/test': Operation not permitted
+
+
+Q6. Create a system user. Make sure the user will not be able to login. (Check man page and passwd file). Verify the user and group items are populated correctly.
+
+A6
+With nologin shell user will not be able to login.
+
+[lisa@lisa ~]$ sudo useradd -r my-system -s /sbin/nologin
+[lisa@lisa ~]$ getent passwd my-system
+my-system:x:995:991::/home/my-system:/sbin/nologin
+[lisa@lisa ~]$ chage -l my-system
+chage: Permission denied.
+[lisa@lisa ~]$ sudo chage -l my-system
+Last password change					: Feb 02, 2025
+Password expires					: never
+Password inactive					: never
+Account expires						: never
+Minimum number of days between password change		: -1
+Maximum number of days between password change		: -1   << see this flag.
+Number of days of warning before password expires	: -1
+
+from manpage 
+       -r, --system
+           Create a system account.
+
+           System users will be created with no aging information in /etc/shadow, and their numeric identifiers are chosen in the SYS_UID_MIN-SYS_UID_MAX range, defined in /etc/login.defs, instead of UID_MIN-UID_MAX (and
+           their GID counterparts for the creation of groups).
+
+           Note that useradd will not create a home directory for such a user, regardless of the default setting in /etc/login.defs (CREATE_HOME). You have to specify the -m options if you want a home directory for a
+           system account to be created.
+
+        
+
+[lisa@lisa homework]$ sudo passwd my-system
+Changing password for user my-system.
+New password:
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[lisa@lisa homework]$ ssh my-system@localhost
+my-system@localhost's password:
+Last failed login: Sun Feb  2 12:33:56 JST 2025 from ::1 on ssh:notty
+There were 2 failed login attempts since the last successful login.
+Could not chdir to home directory /home/my-system: No such file or directory
+This account is currently not available.
+Connection to localhost closed.
+
+
+
+ Run exit. Upload first-name_roll-no_20250129 and raju_timming to google drive.

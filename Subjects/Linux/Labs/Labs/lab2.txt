@@ -1,0 +1,26 @@
+Run "script --timing=timming_first-name -a first-name_roll-no_20250129" (e.g. script --timing=raju_timming -a raju_33444991919_20250113). Make sure to run all below commands on current window only.
+
+0. Copy your ssh to /etc/skel/
+
+1. Add two groups called comp-dept and elec-dept with gid 5000 and 6000 respectively.
+
+2. Add  below users. Verify the user and group items are populated correctly.
+a) sun and moon (uid 5001 and 5002) with comp-dept as Supplementary group
+b) mars and jupiter (uid 6001 and 6002) with elct-dept and comp-dept as Supplementary group
+
+What file permission does sun user have on the home folder? 
+What files exists under the directory including the hidden files? 
+Write the reason why there are multiple files by default?
+
+3. Create file system, and Mount sdb and sdc under /mnt directory. 
+Give right permissions to user sun including his group members so that it has read, write and execute permission on sdb.
+
+4. Login as sun, create sun1 with "hello sun" content under /mnt/sdb. 
+
+5. Login as moon, are you able to read sun1? And update ? if not why?
+
+6. Create a system user. Make sure the user will not be able to login. (Check man page and passwd file). Verify the user and group items are populated correctly.
+
+
+ Run exit. Upload first-name_roll-no_20250129 and raju_timming to google drive.
+

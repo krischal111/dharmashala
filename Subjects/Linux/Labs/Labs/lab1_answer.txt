@@ -1,0 +1,132 @@
+Note: If there is quesion, type answer start with #. 
+
+0. Add three 100MB disk before power on the virtual box.
+
+1. run "script --timing=timming_first-name -a first-name_roll-no_20250113" (e.g. script --timing=timming_raju -a raju_33444991919_20250113). Make sure to run all below commands on current window only
+
+
+2. Find filesystem on SCSI disk (e.g. sdb, sdc, sdd) which is not mounted.
+
+3. Create filesystem on the new disks. Make sure 2 ext4 and 1 xfs.
+
+4. Find filesystem on SCSI disk (e.g. sdb, sdc, sdd) which is not mounted.
+use lsblk
+
+5. Check disk usage and inode usage on the new disks. Write your observation.
+Compare "df -i" and "df -h" output. 
+
+[lisa@raju ~]$ df -h |egrep 'File|mnt'
+Filesystem           Size  Used Avail Use% Mounted on
+/dev/sdb             155M   14K  143M   1% /mnt/sdb
+
+Avail is 143M and Use is 1%.
+
+[lisa@raju ~]$ df -i |egrep 'File|mnt'
+Filesystem           Inodes IUsed   IFree IUse% Mounted on
+/dev/sdb              43648    11   43637    1% /mnt/sdb
+
+IFree is 43637 and IUse is 1%.
+
+6. Create 43600 files on first disk. Repeat 5. (Use fastest method to create the files)
+[lisa@raju ~]$ sudo touch /mnt/sdb/test{1..43637}
+
+7. Repeat 5 and 6 until you get below error. Find the reason why "No space" error observed and fix it.
+
+xxxx: cannot xxxx 'test43638': No space left on device
+
+Compare "df -i" and "df -h" output. Either inode or space is full. Also, check dmesg and /var/log/messages file.
+
+[lisa@raju ~]$ df -h |egrep 'File|mnt'
+Filesystem           Size  Used Avail Use% Mounted on
+/dev/sdb             155M  1.2M  142M   1% /mnt/sdb
+
+Avail is 143M and Use is 1%.
+
+[lisa@raju ~]$ df -i |egrep 'File|mnt'
+Filesystem           Inodes IUsed   IFree IUse% Mounted on
+/dev/sdb              43648 43648       0  100% /mnt/sdb
+[lisa@raju ~]$ df -h |egrep 'File|mnt'
+
+IFree is 0 and IUse is 100%.
+
+It failed due to no more inode available. To fix it, will need delete the files or expand disk.
+
+
+8. Create and delete directories.
+Run below command to create two directories. If fails, why it failed? 
+[lisa@raju mnt]$ mkdir  ~/data/photo
+
+Failed as it was unable to create intermediate direcories. We need to add  "-p" create intermediate directories.  
+
+9. Create file test10 - test19 with date from  2024/12/10 - 2024/12/19 and time 4:10:00 - 4:19:00. (hint modify atime and mtime)
+
+[lisa@raju mnt]$ for i in {10..19}; do echo 202412${i}04${i}; done
+
+for i in {10..19}; do sudo touch -am -t  202412${i}04${i} test${i}; done
+
+
+
+10. Use find and tar command to backup test* files created between 2024/12/10 and 2024/12/15. Make sure preserve atime and mtime.
+for i in {10..19}; do sudo touch -t  202412${i}04${i} test${i}; done
+
+stat test10
+Access: 2024-12-10 04:10:00.000000000 +0900
+Modify: 2024-12-10 04:10:00.000000000 +0900
+Change: 2025-01-13 10:12:02.456664310 +0900
+ Birth: 2025-01-13 09:31:34.625007598 +0900
+
+sudo find . -iname 'test*' -atime +28 -exec ls -l {} \;
+sudo find . -iname 'test*' -atime +28 -exec tar cvpf /tmp/backup.tar {} \+
+
+tar tvpf /tmp/backup.tar
+
+It seems only mtime preserves. 
+
+11. Observe inode of a file during copy and move a file to same filesystem and diff filesystem.
+
+[lisa@raju mnt]$ for i in {10..19}; do echo 202412${i}04${i}; done
+
+for i in {10..19}; do sudo touch -a -m -t  202412${i}04${i} test${i}; done
+
+[lisa@raju sdb]$ stat --print="Access: %x\nModify: %y\n" test10
+Access: 2024-12-10 04:10:00.000000000 +0900
+Modify: 2024-12-10 04:10:00.000000000 +0900
+
+
+On same file system:
+[lisa@raju sdb]$ stat --format="Inode: %i" host2
+Inode: 14
+
+[lisa@raju sdb]$ sudo cp host2 check1/
+[lisa@raju sdb]$ stat --format="Inode: %i" check1/host2
+Inode: 16
+
+[lisa@raju sdb]$ sudo mv host2 check2/
+
+[lisa@raju sdb]$ stat --format="Inode: %i" check2/host2
+Inode: 14
+
+Coping file a same filesystem, the file on target location will get new inode.
+Moving file a same filesystem, the file on target location will have same inode.
+
+
+On diff file system:
+Try yourself.
+
+12. The below command may become destructive. 
+Break a new disk which has ext4 filesystem with below command and fix it. Replace sdX as appropirate.
+sudo umount /dev/sdb
+sudo dd if=/dev/zero of=/dev/sdb bs=1M count=1;
+
+sudo mount /dev/sdb /mnt/sdb;
+
+It will fail
+
+sudo e2fsck -n /dev/sdb;
+
+Read the logs.
+
+sudo e2fsck -y /dev/sdb;
+
+Data might be lost or under lost+found directory, if you are lucky.
+

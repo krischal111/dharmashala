@@ -1,0 +1,37 @@
+Note: If there is quesion, type answer start with #. 
+0. Add three 100MB disk before power on the virtual box.
+
+1. run "script --timing=timming_first-name -a first-name_roll-no_20250113" (e.g. script --timing=timming_raju -a raju_33444991919_20250113). Make sure to run all below commands on current window only
+
+2. Find filesystem on SCSI disk (e.g. sdb, sdc, sdd) which is not mounted.
+
+3. Create filesystem on the new disks. Make sure 2 ext4 and 1 xfs.
+
+4. Find filesystem on SCSI disk (e.g. sdb, sdc, sdd) which is not mounted.
+
+5. Check disk usage and inode usage on the new disks. Write your observation.
+
+6. Create 43600 files on first disk. Repeat 5. (Use fastest method to create the files)
+
+7. Repeat 5 and 6 until you get below error. Find the reason why "No space" error observed and fix it.
+
+xxxx: cannot xxxx 'test43638': No space left on device
+
+8. Create and delete directories.
+Run below command to create two directories. If fails, why it failed? 
+[lisa@raju mnt]$ mkdir  ~/data/photo
+
+9. Create file test10 - test19 with date from  2024/12/10 - 2024/12/19 and time 4:10:00 - 4:19:00. (hint modify atime and mtime)
+
+10. Use find, exec and tar command to backup test* files created between 2024/12/10 and 2024/12/15. Make sure preserve atime and mtime.
+
+11. Observe inode of a file during copy and move a file to same a filesystem and different a filesystem. Write your observation.
+
+12. The below command may become destructive. 
+Break a new disk which has ext4 filesystem with below command and fix it. Replace sdX as appropirate.
+sudo dd if=/dev/zero of=/dev/sdX bs=1M count=1
+
+13. Run exit. Share first-name_roll-no_20250113 and timming_raju to Raju.
+
+
+

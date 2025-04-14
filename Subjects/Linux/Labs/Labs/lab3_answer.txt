@@ -1,0 +1,205 @@
+Note: 
+ Run "script --timing=first-name_timing -a first-name_roll-no_20250129" (e.g. script --timing=raju_timing -a raju_33444991919_20250113). 
+ Make sure to run all below commands on current window only.
+
+1. If there is question, type the question starting with # hit enter
+2. Then type your answer starting with #
+3. If you need to refer manpage, check on another terminal
+
+
+Q1 How many NIC (network card) does your server have? Show brief output.
+
+A1
+[lisa@nepal ~]$ ip -br link show
+lo               UNKNOWN        00:00:00:00:00:00 <LOOPBACK,UP,LOWER_UP>
+enp0s8           UP             08:00:27:64:6f:ef <BROADCAST,MULTICAST,UP,LOWER_UP>
+
+It is one NIC(enp0s8).
+Note: The lo (loopback device) is added to the server even the server does not have any NICs. It is purely used as diagnostic tool. 
+
+Q2 What IP address and subnet mask does the server NIC have?
+
+A2
+[lisa@nepal ~]$ ip -br a s enp0s8
+enp0s8           UP             192.168.1.12/24 240d:1a:88d:6400:a00:27ff:fe64:6fef/64 fe80::a00:27ff:fe64:6fef/64
+
+IP address is 192.168.1.12 and subnet mask is 255.255.255.0.
+Note: /24 notation is called CIDR (Classless Inter-Domain Routing). 
+
+
+Q3 How do you check the routing table in the server?
+
+A3
+The routing table can be checked by using "ip route show" command.
+
+[lisa@nepal ~]$ ip route show
+default via 192.168.1.1 dev enp0s8 proto dhcp src 192.168.1.12 metric 100
+192.168.1.0/24 dev enp0s8 proto kernel scope link src 192.168.1.12 metric 100
+
+
+
+Shutdown the server with below command. 
+shutdown -h 0 now
+Add an additional NIC with same parameter as the existing NIC. Then poweron the server.
+
+*** Make sure to start the script to capture your task ***
+Q4 How many NIC (network card) does your server have? Show brief output.
+
+A4
+There are two NICs.
+[root@nepal ~]# ip -br link show
+lo               UNKNOWN        00:00:00:00:00:00 <LOOPBACK,UP,LOWER_UP>
+enp0s8           UP             08:00:27:64:6f:ef <BROADCAST,MULTICAST,UP,LOWER_UP>
+enp0s9           UP             08:00:27:f7:64:78 <BROADCAST,MULTICAST,UP,LOWER_UP>
+
+Note: Checking at HW level
+[root@nepal ~]#  sudo lspci |grep -i Ethernet
+00:08.0 Ethernet controller: Intel Corporation 82540EM Gigabit Ethernet Controller (rev 02)
+00:09.0 Ethernet controller: Intel Corporation 82540EM Gigabit Ethernet Controller (rev 02)
+
+Q5 Does the new NIC have IP address and subnet mask? If yes, remove it with below command.
+sudo ip add del IP-ADDR/CIDR dev NIC  # replace IP-ADDR/CIDR and NIC as appropirate.
+
+A5
+Yes, the new NIC enp0s9 have a ip address and subnet mask.
+[root@nepal ~]# ip -br a s enp0s9
+enp0s9           UP             192.168.1.4/24 240d:1a:88d:6400:13fd:36b6:737:57f3/64 fe80::8253:9ab9:8121:b5ea/64
+
+[root@nepal ~]# ip addr del 192.168.1.4/24 dev enp0s9
+[root@nepal ~]# ip -br a s enp0s9
+enp0s9           UP             240d:1a:88d:6400:13fd:36b6:737:57f3/64 fe80::8253:9ab9:8121:b5ea/64
+
+[root@nepal ~]# ip addr del 192.168.1.4/24 dev enp0s9
+[root@nepal ~]# ip addr del 240d:1a:88d:6400:13fd:36b6:737:57f3/64  dev enp0s9
+[root@nepal ~]# ip -br a s enp0s9
+enp0s9           UP             fe80::8253:9ab9:8121:b5ea/64
+
+
+
+Q6 Make sure no IP address on new NIC. Assign a new IP address on the NIC. 
+
+A6
+No more IPv4 IP on enp0s9
+[root@nepal ~]# ip -br a s enp0s9
+enp0s9           UP             fe80::e12:504c:23da:4e19/64
+
+
+[root@nepal ~]# ping -c 3 192.168.1.100
+PING 192.168.1.100 (192.168.1.100) 56(84) bytes of data.
+From 192.168.1.12 icmp_seq=1 Destination Host Unreachable
+From 192.168.1.12 icmp_seq=2 Destination Host Unreachable
+From 192.168.1.12 icmp_seq=3 Destination Host Unreachable
+
+--- 192.168.1.100 ping statistics ---
+3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 2077ms
+pipe 3
+
+Note: 192.168.1.100 is not reachable so we can confirm it is free IP.
+
+[root@nepal ~]# ip addr add 192.168.1.100/24 dev enp0s9 metric 110
+
+Note: I had to add metric otherwise network got disconnected. 
+
+[root@nepal ~]# ip -br a s enp0s9
+enp0s9           UP             192.168.1.100/24 metric 110 240d:1a:88d:6400:c9b7:5c0b:e2ef:1793/64 fe80::e12:504c:23da:4e19/64
+
+[root@nepal ~]# ip route show
+default via 192.168.1.1 dev enp0s8 proto dhcp src 192.168.1.12 metric 100
+192.168.1.0/24 dev enp0s8 proto kernel scope link src 192.168.1.12 metric 100
+192.168.1.0/24 dev enp0s9 proto kernel scope link src 192.168.1.100 metric 110
+
+
+Q7 How do you test network connectivity to a remote host?
+
+A7
+The ping command can be used to test network connectivity to a remote host. 
+
+[root@nepal ~]# ping -c 2 8.8.8.8
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=58 time=3.32 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=58 time=3.33 ms
+
+--- 8.8.8.8 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1002ms
+rtt min/avg/max/mdev = 3.324/3.326/3.328/0.002 ms
+
+
+Note: Notice the packet loss and time are values normally check during toubleshooting the bad or slow network response. 
+
+Q8 Check the DNS resolution in the server.
+
+A8
+[root@nepal ~]# dig +short google.com
+142.251.222.14
+
+
+
+Q9 What is the name of the server? 
+
+A9
+The name of the server is "nepal"
+[root@nepal ~]# hostnamectl hostname
+nepal
+
+hostname
+
+Q10 Check the version of Rocky (your vendor) Linux installed on a server?
+
+A10
+It is installed Rocky Linux 9.5.
+
+[root@nepal ~]# cat /etc/rocky-release
+Rocky Linux release 9.5 (Blue Onyx)
+
+Note: Not sure if hostnamectl command is available in all flavours of Linux/Unix. So better remember both ways.
+
+[root@nepal ~]# hostnamectl |grep "Operating System"
+Operating System: Rocky Linux 9.5 (Blue Onyx)
+
+Q10 Change the name of the server permanently.
+
+A10 
+[root@nepal ~]# hostnamectl hostname katmandu
+
+[root@nepal ~]# hostnamectl
+ Static hostname: katmandu
+       Icon name: computer-vm
+         Chassis: vm 🖴
+      Machine ID: 7634f536214b4e81a90265d72a80eb3d
+         Boot ID: 000313ce715b414591a590d6d8fe46f4
+  Virtualization: qemu
+Operating System: Rocky Linux 9.5 (Blue Onyx)
+     CPE OS Name: cpe:/o:rocky:rocky:9::baseos
+          Kernel: Linux 5.14.0-503.14.1.el9_5.aarch64
+    Architecture: arm64
+
+Q11 Login to the new IP on Q6 locally. Which file has the log of login? And show last 10 lines using the tail command.
+
+A11
+Login as user raju.
+
+[root@nepal ~]# ssh raju@192.168.1.100
+The authenticity of host '192.168.1.100 (192.168.1.100)' can't be established.
+ED25519 key fingerprint is SHA256:4XAa05FEBtUqsyZBwQhAe/MS9TVg5sMxJICaPHY2NNA.
+This host key is known by the following other names/addresses:
+    ~/.ssh/known_hosts:1: localhost
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '192.168.1.100' (ED25519) to the list of known hosts.
+raju@192.168.1.100's password:
+Last login: Sun Feb  9 22:11:57 2025 from ::1
+
+Last 10 line of login.
+
+[root@nepal ~]# tail -n 100 /var/log/secure
+Feb  9 22:11:57 nepal sshd[1614]: pam_unix(sshd:session): session opened for user raju(uid=1004) by raju(uid=0)
+Feb  9 22:12:00 nepal sshd[1631]: Received disconnect from ::1 port 50360:11: disconnected by user
+Feb  9 22:12:00 nepal sshd[1631]: Disconnected from user raju ::1 port 50360
+Feb  9 22:12:00 nepal sshd[1614]: pam_unix(sshd:session): session closed for user raju
+Feb  9 22:12:21 nepal sshd[1657]: Accepted password for raju from 192.168.1.100 port 50988 ssh2
+Feb  9 22:12:21 nepal systemd[1662]: pam_unix(systemd-user:session): session opened for user raju(uid=1004) by raju(uid=0)
+Feb  9 22:12:21 nepal sshd[1657]: pam_unix(sshd:session): session opened for user raju(uid=1004) by raju(uid=0)
+Feb  9 22:12:30 nepal sshd[1671]: Received disconnect from 192.168.1.100 port 50988:11: disconnected by user
+Feb  9 22:12:30 nepal sshd[1671]: Disconnected from user raju 192.168.1.100 port 50988
+Feb  9 22:12:30 nepal sshd[1657]: pam_unix(sshd:session): session closed for user raju
+
+Upload both files under lab3 "first_lastname". Do not put space between name.

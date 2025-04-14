@@ -1,0 +1,71 @@
+#!/bin/bash
+
+#1. Write is shell script to create partition using fdisk with below requirement.
+#a. This script creates 3 primary, 1 extend and max available (60) logical partitions on a disk (e.g. sdd) provided in cmd option.
+#b. Define some variables
+#c. Each partition must be 100M
+#d. Must use the "for" loop and if, elif and else condition
+#e. Create ext4 filesystem on all partitions
+#f. Create directories (sdd1, sdd2 ...) under /mnt (), make sure check if directory exists, if already skip create.
+#g. mount all partitions.
+#h. print the newly mounted partition only.
+
+DISK="$1"
+SIZE="+100M"
+PART="30"
+LOGICAL="4"
+
+if [ "$(id -u)" -ne 0 ]; then
+        echo 'This script must be run by root' >&2
+        exit 1
+fi
+
+for i in $(seq ${PART})
+do
+
+    # Delete all partiontion and create the first primary
+  if [ $i -eq 1 ]; then
+    (echo "o";
+     echo "n";
+     echo "p";
+     echo $i;
+     echo "";
+     echo ${SIZE};
+     echo "w";
+    )| fdisk /dev/${DISK} > /dev/null 2>&1
+
+    # Create two additional primary
+  elif [ $i -lt ${LOGICAL} ] ; then
+    (echo "n";
+     echo "p";
+     echo $i;
+     echo "";
+     echo ${SIZE};
+     echo "w";
+    )| fdisk /dev/${DISK}  > /dev/null  2>&1
+
+    # Create an extened partition
+  elif [ $i -eq ${LOGICAL} ]; then
+    (echo "n"; echo "e";  echo ""; echo ""; echo "w"; )| fdisk /dev/${DISK} > /dev/null  2>&1
+
+    # create logical partititons
+  else
+    (echo "n";  echo ""; echo ${SIZE}; echo "w"; )| fdisk /dev/${DISK} > /dev/null  2>&1
+    sleep 1
+  fi
+
+  if [ ! -d "/mnt/disk${i}" ] && [ ${i} -ne ${LOGICAL} ]; then
+      mkfs -t ext4 /dev/${DISK}${i} > /dev/null  2>&1
+      mkdir /mnt/disk${i}
+      mount -t ext4 /dev/${DISK}${i} /mnt/disk$i
+  elif [ $i -ne ${LOGICAL} ]; then
+      mkfs -t ext4 /dev/${DISK}${i} > /dev/null  2>&1
+      mount -t ext4 /dev/${DISK}${i} /mnt/disk${i}
+  else
+	  # echo "this is part ${LOGICAL}"
+	  :
+  fi
+done
+
+echo "Newly mounted disk"
+mount |grep ${DISK}

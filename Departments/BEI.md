@@ -107,6 +107,9 @@ Elective I choices:
         * [Micro Syllabus](../Subjects/Next-Generation-Networks/micro-syllabus.md)
         * [Syllabus](../Subjects/Next-Generation-Networks/syllabus.md)
 7. Elective III
+    - Linux
+        * [Syllabus](../Subjects/Linux/syllabus.md)
+
 
 Elective II choices:
 - Agile Methodologies

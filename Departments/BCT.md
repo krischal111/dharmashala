@@ -98,6 +98,8 @@ Elective I choices:
         * [Micro Syllabus](../Subjects/Next-Generation-Networks/micro-syllabus.md)
         * [Syllabus](../Subjects/Next-Generation-Networks/syllabus.md)
 6. Elective III
+    - Linux
+        * [Syllabus](../Subjects/Linux/syllabus.md)
 7. Project II
 
 Elective II choices:

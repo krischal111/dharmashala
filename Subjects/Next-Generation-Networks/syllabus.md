@@ -5,7 +5,7 @@ Lectures: 4 Teaching Hours per week
 
 Practical: 3 Teaching Hours per two weeks
 
-## Cource Description
+## Course Description
 
 This course covers the fundamental concepts of evolution of wireless communication and mobile computing. The student will learn about fundamental principle of 5G network and beyond. The course includes advanced technologies such as Terahertz spectrum, Reconfigurable Intelligence surfaces, Blockchain technologies and AI and machine learning technologies.
 
