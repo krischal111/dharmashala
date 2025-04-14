@@ -109,6 +109,7 @@ Elective I choices:
 7. Elective III
     - Linux
         * [Syllabus](../Subjects/Linux/syllabus.md)
+        * [Notes](../Subjects/Linux/Notes.md)
 
 
 Elective II choices:

@@ -1,4 +1,4 @@
-# Next Generation Wireless Networks [CT76509]
+# Linux System Administration (Elective III) [CT78517]
 ## Syllabus
 
 Lectures: 4 Teaching Hours per week
