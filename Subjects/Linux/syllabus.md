@@ -25,7 +25,7 @@ Student will be able to understand the fundamentals of Linux (Rocky Linux) opera
     1. The Linux command line
     2. Accessing as a superuser
 
-4. Introduction to File System [------ Hrs]
+4. Introduction to File System [4 Hrs (Assumed)]
     1. Linux File-system Hierarchy
     2. Navigating the Linux File-system
 
@@ -49,15 +49,37 @@ Student will be able to understand the fundamentals of Linux (Rocky Linux) opera
     2. Configuring and managing networking
     3. Basic troubleshooting for networking
 
-9. Advanced Commands (Regular Expressions) [6 Hrs]
+9. Manage Basic Storage [10]
+    1. Create File System
+    2. Mount and unmount Filesystem
+    3. Check File System
+    4. RAID device (optional)
+
+10. Advanced Commands (Regular Expressions) [6 Hrs]
     1. Understand awk, sed, cut, paste
     2. Basic scripting with awk, sed, cut, paste
 
-10. Basic of Systemd
+11. Basic of Systemd [6 Hrs]
     1. Understanding Systemd Units and Unit Files
     2. Systemd files location and types
     3. Anatomy Systemd file
 
+## Evaluation Scheme
+
+| S.N.  | Chapter       | Hours          | Marks Distrubution     |
+| ----- | ------------- | -------------- | ---------------------- |
+| 1     | 1             |   2            |                        |
+| 2     | 2             |   6            |                        |
+| 3     | 3             |   6            |                        |
+| 4     | 4             |   4            |                        |
+| 5     | 5             |   4            |                        |
+| 6     | 6             |   6            |                        |
+| 7     | 7             |   4            |                        |
+| 8     | 8             |   6            |                        |
+| 9     | 9             |  10            |                        |
+| 10    | 10            |   6            |                        |
+| 11    | 11            |   6            |                        |
+| Total |               |  60 hours      |  80                    |
 
 ## Attributions to the Contributors:
 
