@@ -63,15 +63,18 @@ GNU can be used with other kernels like Hurd (GNU's own kernel), or FreeBSD. Lik
 
 ### Chapter 3. Access Linux [6 Hrs]
 
-Excellent introduction to UNIX anatomy (similar to linux): <http://ibgwww.colorado.edu/~lessem/psyc5112/usail/concepts/anatomy-of-unix/anatomy.html>
-
-![UNIX anatomy](http://ibgwww.colorado.edu/~lessem/psyc5112/usail/concepts/images/anatomy.gif)
+Excellent introduction to UNIX anatomy (similar to linux): <http://ibgwww.colorado.edu/~lessem/psyc5112/usail/concepts/anatomy-of-unix/anatomy.html> (If it doesn't work, make sure your browser didn't substitute http for https. Copy pasting may work.)
 
 A computer system consists of hardware, kernel, shell and utilities and user interacts with them. Generally, OS means just kernel and a shell. Utilities are separate from the OS, which provide useful functions to an user, but not essential to the OS function.
 
 Hardware and users know only their own language, and user cannot communicate directly with the hardware to do their task. User talks with the shell to do thier task. Shell then translate user's command to invoke shell or kernel to do the task. Utilites also invoke kernel to do its task. Kernel is like bilingual entity that can either talk with the shell or the hardware. Kernel can command the hardware to do the task commanded by the shell or the utilities.
 
 ### Chapter 4. Introduction to File System [4 Hrs (Assumed)]
+
+#### About `/etc` directory:
+
+There has been controversy over the name of this directory. In early versions of UNIX at bell labs, this directory was called **etcetera** directory, because it contained everything that didn't fit elsewhere. But currently, FHS (Filesystem Hierarchy Standard) restricts usage of this directory for static configuration files, and may not contain any binary files. Thus, today it's often referred using backronyms such as **Editable Text Configuration** or **Extended Tool Chest**.
+
 
 ### Chapter 5. File manipulation [4 Hrs]
 
