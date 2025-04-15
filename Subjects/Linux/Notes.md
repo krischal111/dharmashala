@@ -29,6 +29,7 @@ For supplementary contents which provide clarification for some of the contents,
 ### Chapter 6. Mastering Vim [6 Hrs]
 
 ### Chapter 7. Users/Groups and File Permissions Core Information [4 Hrs]
+[Chapter 7 notes](./Notes/Chapter-7.md)
 
 ### Chapter 8. Basic networking [6 Hrs]
 
