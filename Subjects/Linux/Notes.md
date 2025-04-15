@@ -34,7 +34,10 @@ For supplementary contents which provide clarification for some of the contents,
 ### Chapter 8. Basic networking [6 Hrs]
 
 ### Chapter 9. Manage Basic Storage [10]
+[Lab task of creating 60 partitions](./Labs/Labs/lab4/create_60_partitions.sh)
 
 ### Chapter 10. Advanced Commands (Regular Expressions) [6 Hrs]
+
+No notes avilable yet.
 
 ### Chapter 11. Basic of Systemd [6 Hrs]
