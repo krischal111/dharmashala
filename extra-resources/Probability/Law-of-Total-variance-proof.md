@@ -23,15 +23,16 @@ $$ E(X^2) = Var(X) + E(X) ^ 2 $$
 ### Proof:
 
 Start with the RHS:
-$$ RHS = E(Var(Y| X)) + Var(E(Y | X)) $$
+
+$$ RHS = E(Var(Y | X)) + Var(E(Y | X)) $$
 
 Using law 3:
 
-$$ RHS = E(Var(Y| X)) + E(E(Y | X)^2) - E(E(Y | X))^2 $$
+$$ RHS = E(Var(Y | X)) + E(E(Y | X)^2) - E(E(Y | X))^2 $$
 
 Using Law 1 and Law 2:
 
-$$ RHS = E(Var(Y| X) + E(Y | X)^2) - E(Y)^2 $$
+$$ RHS = E(Var(Y | X) + E(Y | X)^2) - E(Y)^2 $$
 
 Using law 3:
 
