@@ -20,6 +20,7 @@
 1. Theory of Computation
 2. Object Oriented Programming
 3. Digital Logic
+    * [Repository containing Digital Logic Circuits in Proteus](https://github.com/krischal111/proteus-files)
 4. Electronics Devices and Circuit
 5. Electromagnetism
 6. Engineering Mathematics III

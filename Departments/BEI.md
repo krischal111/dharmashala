@@ -2,6 +2,7 @@
 
 ## First Semester
 1. Digital Logic
+    * [Repository containing Digital Logic Circuits in Proteus](https://github.com/krischal111/proteus-files)
 2. Computer Programming
 3. Engineering Mathematics
 4. Basic Electrical Engineering
