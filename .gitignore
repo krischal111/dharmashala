@@ -1,2 +1,22 @@
-.DS_Store
 .vscode/settings.json
+
+# Ignore device-specific workspaces (prevents constant merge conflicts)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/workspaces.json
+
+# Ignore cache and internal storage
+.obsidian/cache/
+.obsidian/graph.json
+
+# Ignore large plugin caches or indices (e.g., Copilot or local AI vector databases)
+.obsidian/plugins/*/cache/
+.obsidian/.smart-connections/
+.obsidian/plugins/copilot/copilot-index-*.json
+
+# Ignore Obsidian internal trash folder
+.trash/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
