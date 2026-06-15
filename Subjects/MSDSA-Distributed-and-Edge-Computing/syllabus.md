@@ -7,6 +7,12 @@ Tutorial: 0 Teaching Hours per week
 
 Practical: 0 Teaching Hours per two weeks
 
+Year: I
+
+Part: I
+
+Course Type: Core
+
 ## Course Objectives
 
 The objective of the course is to familiarize students with current trends and principles in distributed and edge computing systems. After completing the course students will be able to analyze distributed and edge computing systems, design and implement modern and future systems and use their knowledge in analysis and research work in distributed and edge computing systems.
@@ -104,8 +110,6 @@ There will be five units of questions carrying 12 marks each. The question will 
 | 4     | 4             |  8             |   12                   |
 | 5     | 6             |  4             |   12                   |
 | Total |               | 45 hours       |   60                   |
-
-lorem ipsum
 
 ## References
     1. Andrew S. Tanenbaum, Marteen V. Steen, "Distributed Systems Principls and Paradigms", 2nd edition

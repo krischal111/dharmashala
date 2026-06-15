@@ -2,11 +2,13 @@
 
 ## First Semester
 1. Foundation of data science and analytics
+    * [Syllabus](../Subjects/MSDSA-Foundation-of-Data-Science-and-Analytics/syllabus.md)
 2. Distributed and Edge Computing
     * [Syllabus](../Subjects/MSDSA-Distributed-and-Edge-Computing/syllabus.md)
 3. Machine Learning and Computational Intelligence
+	* [Syllabus](../Subjects/MSDSA-Machine-Learning-and-Computational-Intelligence/syllabus.md)
 4. Big data analytics
-
+	* [Syllabus](../Subjects/MSDSA-Big-Data-Analysis/syllabus.md)
 ## Second Semester
 1. Optimization Theory and Techniques
 2. Information Vizualization

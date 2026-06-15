@@ -1,3 +1,13 @@
 {
-  "vimMode": true
+  "vimMode": false,
+  "alwaysUpdateLinks": true,
+  "newLinkFormat": "relative",
+  "attachmentFolderPath": "./",
+  "newFileLocation": "current",
+  "useMarkdownLinks": true,
+  "showUnsupportedFiles": true,
+  "propertiesInDocument": "visible",
+  "showLineNumber": false,
+  "smartIndentList": true,
+  "tabSize": 4
 }

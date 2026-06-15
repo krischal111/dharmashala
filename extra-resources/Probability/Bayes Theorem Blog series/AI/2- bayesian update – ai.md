@@ -134,17 +134,17 @@ Say you take a second, independent test, and it also comes back positive:
 
 ```python
 # First positive test
-posterior_1 = bayesian_update(0.001, 0.99, 0.01)
+posterior_1 = bayesian_update(0.001, 0.99, 0.05)
 print(f"After first positive test:  {posterior_1:.4f}")
 
 # Second positive test — use posterior_1 as new prior
-posterior_2 = bayesian_update(posterior_1, 0.99, 0.01)
+posterior_2 = bayesian_update(posterior_1, 0.99, 0.05)
 print(f"After second positive test: {posterior_2:.4f}")
 ```
 
 ```
-After first positive test:  0.0902
-After second positive test: 0.9075
+After first positive test: 0.0194
+After second positive test: 0.2818
 ```
 
 After two independent positive tests, you are now over 90% likely to have the disease. The evidence accumulates.
