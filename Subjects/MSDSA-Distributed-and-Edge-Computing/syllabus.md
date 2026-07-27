@@ -1,4 +1,4 @@
-# Distributed and Edge Computing (needs update)
+# Distributed and Edge Computing
 ## Syllabus
 
 Lectures: 4 Teaching Hours per week
@@ -19,7 +19,7 @@ The objective of the course is to familiarize students with current trends and p
 
 ## Theory
 
-1. Chapter 1 (4 hours)
+1. Introduction (7 hours)
     1. Basics of Distributed Systems
     2. Evolution of Distributed Computing Systems
     3. Distributed System Models and Enabling Technologies
@@ -30,7 +30,7 @@ The objective of the course is to familiarize students with current trends and p
     8. Network os
     9. Distributed web based system
 
-2. Mesage Passing and Communication (10 hrs) (updated syllabus, if exists may be different)
+2. Mesage Passing and Communication (10 hrs)
     1. Communication in Distributed system
     2. Layered Network Protocols
     3. Middleware
@@ -56,7 +56,7 @@ The objective of the course is to familiarize students with current trends and p
     2.  Continuous consistency
     3.  Consistent ordering of operations
     4.  Client centric consistency
-    5.  Replica management,
+    5.  Replica management
     6.  Consistency protocols
     7.  Concurrency control
     8.  Exception handling
@@ -81,9 +81,16 @@ The objective of the course is to familiarize students with current trends and p
     11. Connsensus and the paxos algorithm
     12. Basics of edge computing
     13. Cloud computing vs edge computing
-    14. Fog computing
+    14. Fog Computing
+    15. Mist Computing
+    16. IoT
+    17. Opportunities and Challenges of Edge Computing
+    18. Integrating Edge + Fog + Cloud Infrastructures
+    19. Network Slicing
+    20. Middleware for Fog and Edge Computing
+    21. Machine Learning in Fog Computing
 
-6. Distributed system security (8 hrs)
+6. Distributed system security (7 hrs)
     1. Overview of cryptography and data privacy
     2. Security issues and techniques in distributed system
     3. Introduction to digital forensics
@@ -104,11 +111,11 @@ There will be five units of questions carrying 12 marks each. The question will 
 
 | S.N.  | Chapter       | Hours          | Marks Distrubution     |
 | ----- | ------------- | -------------- | ---------------------- |
-| 1     | 1,5           |  4             |   12                   |
-| 2     | 2             |  4             |   12                   |
-| 3     | 3             |  4             |   12                   |
-| 4     | 4             |  8             |   12                   |
-| 5     | 6             |  4             |   12                   |
+| 1     | 1,3           |  17            |   12                   |
+| 2     | 2             |  10            |   10                   |
+| 3     | 4             |  12            |   12                   |
+| 4     | 5             |  14            |   16                   |
+| 5     | 6             |  7             |   10                   |
 | Total |               | 45 hours       |   60                   |
 
 ## References
