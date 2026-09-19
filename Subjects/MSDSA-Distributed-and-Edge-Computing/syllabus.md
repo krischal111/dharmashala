@@ -49,7 +49,7 @@ The objective of the course is to familiarize students with current trends and p
     3. Mutex
     4. Global state
     5. State recording
-    6. Electron algorithms
+    6. Election algorithms
 
 4. Replication (12 hrs)
     1.  Reason for replication
